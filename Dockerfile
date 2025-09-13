@@ -1,5 +1,8 @@
 FROM python:3.9-slim
 
+LABEL maintainer="Movie-Mate Using Machine Learning Team"
+LABEL description="AI-powered movie recommendation system built with Streamlit and Machine Learning"
+
 WORKDIR /app
 
 # Install system dependencies

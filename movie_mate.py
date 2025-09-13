@@ -109,8 +109,8 @@ def recommend(movie_title):
 
 
 # ----------------- Streamlit UI -----------------
-st.set_page_config(page_title="Movie Recommender", layout="wide")
-st.title("🎬 Movie Recommender System")
+st.set_page_config(page_title="Movie-Mate Using Machine Learning", page_icon="🎬", layout="wide", initial_sidebar_state="expanded")
+st.title("🎬 Movie-Mate Using Machine Learning")
 
 # Load movies and similarity data
 movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))

@@ -54,7 +54,7 @@ cp .env.example .env
 # Edit .env with your TMDb API key
 
 # Run the application
-streamlit run app.py
+streamlit run movie_mate.py
 ```
 
 ### Environment Setup
@@ -101,7 +101,7 @@ SIMILARITY_ID=1O8daZuVfRh8vUukVWdyS23NPghrj2kbd
 
 ```
 Movie-Mate/
-├── 📁 app.py                    # Main Streamlit application
+├── 📁 movie_mate.py             # Main Streamlit application
 ├── 📁 requirements.txt          # Python dependencies
 ├── 📁 .env.example             # Environment variables template
 ├── 📁 .gitignore               # Git ignore rules

@@ -31,7 +31,7 @@ cp .env.example .env
 # Edit .env with your TMDb API key
 
 # Run application
-streamlit run app.py
+streamlit run movie_mate.py
 ```
 
 ## Heroku Deployment
@@ -107,7 +107,7 @@ streamlit run app.py
    - Use the following settings:
      - **Environment**: Python 3
      - **Build Command**: `pip install -r requirements.txt`
-     - **Start Command**: `streamlit run app.py --server.port=10000 --server.address=0.0.0.0`
+     - **Start Command**: `streamlit run movie_mate.py --server.port=10000 --server.address=0.0.0.0`
 
 3. **Set Environment Variables**
    - Add in Render dashboard:
@@ -173,7 +173,7 @@ streamlit run app.py
    WorkingDirectory=/home/ubuntu/Movie-Mate
    Environment=PATH=/home/ubuntu/Movie-Mate/venv/bin
    Environment=API_KEY=your_tmdb_api_key
-   ExecStart=/home/ubuntu/Movie-Mate/venv/bin/streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+   ExecStart=/home/ubuntu/Movie-Mate/venv/bin/streamlit run movie_mate.py --server.port=8501 --server.address=0.0.0.0
    Restart=always
 
    [Install]

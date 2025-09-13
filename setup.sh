@@ -87,7 +87,7 @@ python -c "import streamlit; print('Streamlit version:', streamlit.__version__)"
 cat > run.sh << 'EOF'
 #!/bin/bash
 source venv/bin/activate
-streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+streamlit run movie_mate.py --server.port=8501 --server.address=0.0.0.0
 EOF
 
 chmod +x run.sh
@@ -96,7 +96,7 @@ chmod +x run.sh
 cat > run.bat << 'EOF'
 @echo off
 call venv\Scripts\activate
-streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+streamlit run movie_mate.py --server.port=8501 --server.address=0.0.0.0
 pause
 EOF
 

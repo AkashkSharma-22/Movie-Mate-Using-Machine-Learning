@@ -12,11 +12,21 @@ A smart movie recommendation system that uses machine learning to suggest movies
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Hugging Face Spaces (Recommended)
+
+1. **Fork this repository**
+2. **Go to [Hugging Face Spaces](https://huggingface.co/spaces)**
+3. **Create a new Space** with Streamlit
+4. **Connect your GitHub repository**
+5. **Add your TMDb API key** in Space settings
+
+### Local Development
+
+#### Prerequisites
 - Python 3.7+
 - TMDb API key (free from [TMDb](https://www.themoviedb.org/settings/api))
 
-### Installation
+#### Installation
 
 1. **Clone the repository**
    ```bash
@@ -37,7 +47,7 @@ A smart movie recommendation system that uses machine learning to suggest movies
 
 4. **Run the application**
    ```bash
-   streamlit run movie_mate.py
+   streamlit run app.py
    ```
 
 5. **Access the app** at `http://localhost:8501`
@@ -72,7 +82,8 @@ docker run -p 8501:8501 -e API_KEY=your_tmdb_api_key movie-mate
 
 ```
 Movie-Mate/
-├── movie_mate.py          # Main Streamlit application
+├── app.py                 # Main Streamlit application (Hugging Face compatible)
+├── movie_mate.py          # Original application file
 ├── requirements.txt       # Python dependencies
 ├── .env.example          # Environment variables template
 ├── Dockerfile            # Docker configuration
@@ -83,22 +94,34 @@ Movie-Mate/
 └── archive/             # Raw dataset files
 ```
 
-## 🔧 Development
+## 🔧 Hugging Face Spaces Setup
 
-### Local Development
-```bash
-# Install dependencies
-pip install -r requirements.txt
+### Method 1: Direct Upload (Easiest)
+1. **Download the repository** as ZIP
+2. **Go to [Hugging Face Spaces](https://huggingface.co/spaces)**
+3. **Create new Space** → Choose "Streamlit"
+4. **Upload files** including data files (movie_dict.pkl, similarity.pkl)
+5. **Add API key** in Space secrets
 
-# Run the app
-streamlit run movie_mate.py
-```
+### Method 2: GitHub Integration (Recommended)
+1. **Fork this repository**
+2. **Go to [Hugging Face Spaces](https://huggingface.co/spaces)**
+3. **Create new Space** → Choose "Streamlit"
+4. **Select "Import from GitHub"**
+5. **Add your TMDb API key** in Space secrets as `API_KEY`
 
-### Environment Variables
-Create a `.env` file:
-```
-API_KEY=your_tmdb_api_key_here
-```
+### Adding API Key to Hugging Face Spaces
+
+1. Go to your Space settings
+2. Navigate to **"Variables and secrets"**
+3. Add new secret:
+   - **Name**: `API_KEY`
+   - **Value**: Your TMDb API key
+   - **Visibility**: Private
+
+## 🌍 Live Demo
+
+**Try it now**: [Live Demo on Hugging Face Spaces](https://huggingface.co/spaces/your-username/movie-mate)
 
 ## 📊 Dataset
 
@@ -122,4 +145,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [TMDb](https://www.themoviedb.org/) for the comprehensive movie database
 - [Streamlit](https://streamlit.io/) for the excellent web framework
+- [Hugging Face](https://huggingface.co/) for hosting and deployment
 - The open-source community for inspiration and support
